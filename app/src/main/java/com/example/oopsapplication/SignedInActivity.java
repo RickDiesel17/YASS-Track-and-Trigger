@@ -35,19 +35,19 @@ import com.google.android.gms.tasks.Task;
 */
 
 public class SignedInActivity extends AppCompatActivity {
-  public Button customize;
+ // public Button customize;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signed_in2);
-        customize=(Button) findViewById(R.id.customization);
+        Button customize=(Button) findViewById(R.id.customization);
 
         customize.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intentv = new Intent(SignedInActivity.this,customization_page.class);
-                startActivity(intentv);
+                Intent intent5 = new Intent(SignedInActivity.this,customization_page.class);
+                startActivity(intent5);
             }
         });
         FirebaseUser currentUser =
