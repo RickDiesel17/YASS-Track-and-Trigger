@@ -10,8 +10,7 @@ Members:
 
 In modern household, due to hectic work schedules, it is quite difficult to remember as well as manage the availability of mandatory commodities. Y.A.S.S. TRACKER helps you to keep a track of the regular activities and aid people in managing the daily home inventories.
 
-**
-LOGIN PAGE**
+**LOGIN PAGE**
 
 Login page allows the user to sign in via different methods such as
 •	Mobile Number (with OTP verification)
@@ -48,10 +47,9 @@ Steps-
 User can also set repetition interval for his reminder to repeat his reminder on an hourly/daily/ weekly/monthly basis.
 Then, you can see multiple reminders at a glance and reminder notifications are triggered at set time.
 
-**
-DASHBOARDS**
-_
-Work Dashboard:_
+**DASHBOARDS**
+
+_Work Dashboard:_
 If the user is a working professional, then he lands on the work dashboard where he can manages his work in the provided categories.
 
 _Academic Dashboard:_
