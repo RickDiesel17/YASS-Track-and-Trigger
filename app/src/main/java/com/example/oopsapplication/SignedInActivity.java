@@ -1,12 +1,16 @@
 package com.example.oopsapplication;
 
 import android.content.Intent;
-import androidx.annotation.NonNull;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.net.Uri;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.firebase.ui.auth.AuthUI;
@@ -14,12 +18,6 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
-
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.net.Uri;
-import android.os.AsyncTask;
-import android.widget.ImageView;
 
 import java.io.InputStream;
 
@@ -35,21 +33,13 @@ import com.google.android.gms.tasks.Task;
 */
 
 public class SignedInActivity extends AppCompatActivity {
- // public Button customize;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signed_in2);
-        Button customize=(Button) findViewById(R.id.customization);
 
-        customize.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent5 = new Intent(SignedInActivity.this,customization_page.class);
-                startActivity(intent5);
-            }
-        });
         FirebaseUser currentUser =
                 FirebaseAuth.getInstance().getCurrentUser();
 
@@ -70,6 +60,15 @@ public class SignedInActivity extends AppCompatActivity {
         }
     }
 
+    /* public void changePage(View view)
+     {Intent intent5 = new Intent(SignedInActivity.this,customization_page.class);
+         startActivity(intent5);}*/
+    public void change(View view)
+    {
+
+        Intent intent1 = new Intent(SignedInActivity.this,MainActivity.class);
+        startActivity(intent1);
+    }
 
     public void signOut(View view) {
         AuthUI.getInstance()
@@ -136,4 +135,5 @@ public class SignedInActivity extends AppCompatActivity {
             bmImage.setImageBitmap(result);
         }
     }
+
 }

@@ -13,7 +13,7 @@ import com.google.firebase.auth.FirebaseAuth;
 
 import java.util.ArrayList;
 import java.util.List;
-
+// DITTO FIREBASE AUTH ACTIVITY KA COPY KARKE PASTE KIYA HAI SO NO NEED TO WORRY ABT THE RED UNDERLINES
 //import android.support.v7.app.AppCompatActivity;
 
 public class FirebaseAuthActivity extends AppCompatActivity {
@@ -28,6 +28,8 @@ public class FirebaseAuthActivity extends AppCompatActivity {
 
         auth = FirebaseAuth.getInstance();
 
+
+
         if (auth.getCurrentUser() != null) {
             startActivity(new Intent(this, SignedInActivity.class));
             finish();
@@ -38,15 +40,13 @@ public class FirebaseAuthActivity extends AppCompatActivity {
     }
 
     private void authenticateUser() {
-        startActivityForResult(
-                AuthUI.getInstance().createSignInIntentBuilder()
-                        .setTheme(R.style.CustomTheme)
-                        .setLogo(R.drawable.firelogo)
+        startActivityForResult(AuthUI.getInstance().createSignInIntentBuilder()
+                .setTheme(R.style.CustomTheme)
+                .setLogo(R.drawable.firelogo)
 
-                        .setAvailableProviders(getProviderList())
-                        .setIsSmartLockEnabled(true)
-                        .build(),
-                REQUEST_CODE);
+                .setAvailableProviders(getProviderList())
+                .setIsSmartLockEnabled(true)
+                .build(), REQUEST_CODE);
     }
 
     private List<AuthUI.IdpConfig> getProviderList() {
